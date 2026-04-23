@@ -3,7 +3,6 @@
 	import WisataTab from "$lib/components/WisataTab.svelte";
 	import EmergencyTab from "$lib/components/EmergencyTab.svelte";
 	import ChecklistTab from "$lib/components/ChecklistTab.svelte";
-	import TrafficTab from "$lib/components/TrafficTab.svelte";
 	import Icon from "@iconify/svelte";
 
 	let activeTab = $state("timeline");
@@ -13,7 +12,6 @@
 		{ id: "wisata", label: "Wisata", icon: "solar:album-bold" },
 		{ id: "darurat", label: "Darurat", icon: "solar:danger-triangle-bold" },
 		{ id: "checklist", label: "Checklist", icon: "solar:checklist-bold" },
-		{ id: "traffic", label: "Lalu Lintas", icon: "solar:traffic-bold" },
 	];
 </script>
 
@@ -43,8 +41,6 @@
 			<EmergencyTab />
 		{:else if activeTab === "checklist"}
 			<ChecklistTab />
-		{:else if activeTab === "traffic"}
-			<TrafficTab />
 		{/if}
 	</main>
 
@@ -108,16 +104,13 @@
 	.header-title h1 {
 		font-size: 18px;
 		font-weight: 700;
-		background: var(--gradient-primary);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
+		color: #ffffff;
 		line-height: 1.2;
 	}
 
 	.header-subtitle {
 		font-size: 11px;
-		color: var(--text-secondary);
+		color: rgba(255, 255, 255, 0.9);
 		font-weight: 400;
 		margin-top: 2px;
 	}
@@ -129,12 +122,13 @@
 	}
 
 	.header-badge span {
-		background: var(--bg-highlight);
-		border: 1px solid var(--border-subtle);
+		background: rgba(255, 255, 255, 0.2);
+		border: 1px solid rgba(255, 255, 255, 0.3);
 		padding: 4px 10px;
 		border-radius: 20px;
 		font-size: 12px;
 		font-weight: 500;
+		color: #ffffff;
 	}
 
 	.app-main {
