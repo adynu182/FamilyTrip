@@ -98,40 +98,43 @@
 					{/if}
 
 					{#if route.traffic && route.traffic.length > 0}
-						<div class="traffic-section">
-							<div class="traffic-section-title">
-								🚦 Prediksi Lalu Lintas
+						<details class="traffic-section">
+							<summary class="traffic-section-title">
+								<span>🚦 Prediksi Lalu Lintas</span>
+								<span class="collapse-icon">▼</span>
+							</summary>
+							<div class="traffic-content">
+								{#each route.traffic as seg}
+									<div class="traffic-seg">
+										<div class="traffic-seg-header">
+											<span class="traffic-seg-route"
+												>{seg.route}</span
+											>
+											<span
+												class="traffic-seg-level"
+												style="color: {getLevelColor(
+													seg.level,
+												)}">{getLevelLabel(seg.level)}</span
+											>
+										</div>
+										<div class="traffic-bar">
+											<div
+												class="traffic-bar-fill"
+												style="width:{seg.level === 'lancar'
+													? '30'
+													: seg.level === 'sedang'
+														? '60'
+														: '90'}%;background:{getLevelColor(
+													seg.level,
+												)}"
+											></div>
+										</div>
+										<p class="traffic-pred">{seg.prediction}</p>
+										<p class="traffic-tip">💡 {seg.tips}</p>
+									</div>
+								{/each}
 							</div>
-							{#each route.traffic as seg}
-								<div class="traffic-seg">
-									<div class="traffic-seg-header">
-										<span class="traffic-seg-route"
-											>{seg.route}</span
-										>
-										<span
-											class="traffic-seg-level"
-											style="color: {getLevelColor(
-												seg.level,
-											)}">{getLevelLabel(seg.level)}</span
-										>
-									</div>
-									<div class="traffic-bar">
-										<div
-											class="traffic-bar-fill"
-											style="width:{seg.level === 'lancar'
-												? '30'
-												: seg.level === 'sedang'
-													? '60'
-													: '90'}%;background:{getLevelColor(
-												seg.level,
-											)}"
-										></div>
-									</div>
-									<p class="traffic-pred">{seg.prediction}</p>
-									<p class="traffic-tip">💡 {seg.tips}</p>
-								</div>
-							{/each}
-						</div>
+						</details>
 					{/if}
 				</div>
 			{/each}
@@ -233,7 +236,15 @@
 		gap: 10px;
 	}
 	.route-mode-icon {
-		font-size: 24px;
+		font-size: 22px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 44px;
+		height: 44px;
+		background: rgba(59, 130, 246, 0.12);
+		border-radius: 20%;
+		flex-shrink: 0;
 	}
 	.route-mode-info {
 		display: flex;
@@ -436,9 +447,6 @@
 	.traffic-section {
 		border-top: 1px solid var(--border-subtle);
 		padding-top: 12px;
-		display: flex;
-		flex-direction: column;
-		gap: 10px;
 	}
 	.traffic-section-title {
 		font-size: 12px;
@@ -447,6 +455,28 @@
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
 		margin-bottom: 2px;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		list-style: none;
+		user-select: none;
+	}
+	.traffic-section-title::-webkit-details-marker {
+		display: none;
+	}
+	.collapse-icon {
+		font-size: 10px;
+		transition: transform 0.3s ease;
+	}
+	details[open] .collapse-icon {
+		transform: rotate(180deg);
+	}
+	.traffic-content {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		margin-top: 10px;
 	}
 	.traffic-seg {
 		display: flex;

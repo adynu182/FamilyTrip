@@ -96,6 +96,25 @@
 					<span>💡</span>
 					{place.tips}
 				</div>
+				{#if place.ig || place.web || place.maps}
+					<div class="place-links">
+						{#if place.ig}
+							<a href={place.ig} target="_blank" rel="noopener noreferrer" class="link-btn ig">
+								<Icon icon="mdi:instagram" width="14" /> Instagram
+							</a>
+						{/if}
+						{#if place.web}
+							<a href={place.web} target="_blank" rel="noopener noreferrer" class="link-btn web">
+								<Icon icon="mdi:web" width="14" /> Website
+							</a>
+						{/if}
+						{#if place.maps}
+							<a href={place.maps} target="_blank" rel="noopener noreferrer" class="link-btn maps">
+								<Icon icon="mdi:map-marker" width="14" /> Maps
+							</a>
+						{/if}
+					</div>
+				{/if}
 			</div>
 		{/each}
 	</div>
@@ -279,5 +298,42 @@
 		display: flex;
 		gap: 6px;
 		align-items: flex-start;
+	}
+
+	.place-links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin-top: 4px;
+	}
+
+	.link-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 4px;
+		padding: 6px 10px;
+		border-radius: 8px;
+		font-size: 11px;
+		font-weight: 600;
+		text-decoration: none;
+		transition: opacity 0.2s, transform 0.1s;
+	}
+	.link-btn:hover {
+		opacity: 0.8;
+	}
+	.link-btn:active {
+		transform: scale(0.96);
+	}
+	.link-btn.ig {
+		background: rgba(225, 48, 108, 0.1);
+		color: #e1306c;
+	}
+	.link-btn.web {
+		background: rgba(59, 130, 246, 0.1);
+		color: #3b82f6;
+	}
+	.link-btn.maps {
+		background: rgba(34, 197, 94, 0.1);
+		color: #16a34a;
 	}
 </style>
