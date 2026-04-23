@@ -9,7 +9,7 @@
 
 	const tabs = [
 		{ id: "timeline", label: "Jadwal", icon: "solar:calendar-bold" },
-		{ id: "wisata", label: "Wisata", icon: "solar:album-bold" },
+		{ id: "wisata", label: "Wisata", icon: "solar:camera-bold" },
 		{ id: "darurat", label: "Darurat", icon: "solar:danger-triangle-bold" },
 		{ id: "checklist", label: "Checklist", icon: "solar:checklist-bold" },
 	];
