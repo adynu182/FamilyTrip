@@ -54,10 +54,10 @@
 						<div class="path-line">
 							{#if route.fastest}
 								<div class="duration-badge">
-									<span>⚡ {route.fastest}</span>
+									<span>⚡ Tercepat ± {route.fastest}</span>
 									{#if route.slowest}
 										<span class="slow"
-											>🐢 {route.slowest}</span
+											>🐢 Terlama ± {route.slowest}</span
 										>
 									{/if}
 								</div>
@@ -114,13 +114,17 @@
 												class="traffic-seg-level"
 												style="color: {getLevelColor(
 													seg.level,
-												)}">{getLevelLabel(seg.level)}</span
+												)}"
+												>{getLevelLabel(
+													seg.level,
+												)}</span
 											>
 										</div>
 										<div class="traffic-bar">
 											<div
 												class="traffic-bar-fill"
-												style="width:{seg.level === 'lancar'
+												style="width:{seg.level ===
+												'lancar'
 													? '30'
 													: seg.level === 'sedang'
 														? '60'
@@ -129,7 +133,9 @@
 												)}"
 											></div>
 										</div>
-										<p class="traffic-pred">{seg.prediction}</p>
+										<p class="traffic-pred">
+											{seg.prediction}
+										</p>
 										<p class="traffic-tip">💡 {seg.tips}</p>
 									</div>
 								{/each}
