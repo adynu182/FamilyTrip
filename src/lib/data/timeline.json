@@ -193,11 +193,11 @@
     "routes": [
       {
         "id": 7,
-        "from": "Rumah Saudara",
+        "from": "Rumah Saudara di Tasik",
         "to": "Akad & Resepsi Pernikahan",
         "fromCoord": "-7.3177507,108.2215219",
         "toCoord": "-7.3054637,108.2489170",
-        "mode": "2 Mobil",
+        "mode": "Ke Acara Pernikahan",
         "modeIcon": "🚗",
         "departure": "15:00",
         "arrival": "~15:20",
