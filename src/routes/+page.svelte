@@ -24,9 +24,7 @@
 				<span class="header-emoji">🚗</span>
 				<div>
 					<h1>Trip Keluarga</h1>
-					<p class="header-subtitle">
-						Bandung & Tasikmalaya • 1-3 Mei 2026
-					</p>
+					<p class="header-subtitle">Bandung & Tasikmalaya</p>
 				</div>
 			</div>
 			<div class="header-badge">
