@@ -1,32 +1,8 @@
 <script lang="ts">
 	const STORAGE_KEY = 'familytrip_checklist';
 
-	const defaultData = [
-		{
-			category: '👜 Pakaian & Perlengkapan',
-			items: ['Baju ganti 3 hari (+ cadangan 1)', 'Jaket tebal (Lembang dingin)', 'Pakaian formal untuk acara pernikahan', 'Sandal & sepatu nyaman', 'Jas hujan / payung lipat', 'Perlengkapan mandi (sabun, shampoo, sikat gigi)', 'Handuk kecil']
-		},
-		{
-			category: '💊 Kesehatan & P3K',
-			items: ['Obat pribadi (darah tinggi, maag, dll)', 'Obat anti mabuk (Antimo)', 'Paracetamol / Ibuprofen', 'Minyak kayu putih / balsem', 'Plester & antiseptik', 'Obat diare (Entrostop/Norit)', 'Masker & hand sanitizer', 'Tisu basah & kering']
-		},
-		{
-			category: '📱 Elektronik',
-			items: ['Charger HP & kabel data', 'Power bank (terisi penuh)', 'Charger mobil', 'Kamera / GoPro (opsional)', 'Earphone / headset']
-		},
-		{
-			category: '📄 Dokumen',
-			items: ['KTP semua anggota', 'SIM pengemudi', 'STNK kendaraan', 'Kartu BPJS / asuransi kesehatan', 'Uang cash secukupnya', 'Kartu e-toll (isi saldo min Rp 500.000)', 'Bukti booking villa (screenshot)']
-		},
-		{
-			category: '🚗 Kendaraan',
-			items: ['Cek oli mesin & radiator', 'Cek tekanan ban & ban serep', 'Cek air wiper & lampu', 'Dongkrak & kunci roda', 'Isi bensin penuh', 'Segitiga pengaman', 'Pastikan AC mobil berfungsi']
-		},
-		{
-			category: '🍼 Anak-anak',
-			items: ['Snack & minuman perjalanan', 'Bantal leher / selimut kecil', 'Mainan / tablet untuk hiburan', 'Kantong plastik (jaga-jaga mual)', 'Susu / makanan bayi (jika ada)']
-		}
-	];
+	import checklistData from '$lib/data/checklist.json';
+	const defaultData = checklistData.categories;
 
 	function loadChecks(): boolean[][] {
 		if (typeof window === 'undefined') return defaultData.map(c => c.items.map(() => false));
@@ -53,18 +29,7 @@
 		}
 	}
 
-	const tips = [
-		{ icon: '⛽', title: 'Isi Bensin Penuh', desc: 'Isi bensin di SPBU sebelum masuk tol. Harga di rest area lebih mahal.' },
-		{ icon: '🛣️', title: 'Isi Saldo e-Toll', desc: 'Pastikan saldo e-toll minimal Rp 500.000 untuk pulang-pergi.' },
-		{ icon: '😴', title: 'Istirahat Cukup', desc: 'Setiap 2 jam berkendara, istirahat 15-30 menit di rest area.' },
-		{ icon: '🌙', title: 'Perjalanan Malam', desc: 'Untuk perjalanan malam (Tasik→Rumah), siapkan kopi & bergantian menyetir.' },
-		{ icon: '📱', title: 'Share Live Location', desc: 'Aktifkan share location di WhatsApp agar keluarga tahu posisi.' },
-		{ icon: '🍱', title: 'Bekal Makanan', desc: 'Bawa bekal untuk di perjalanan, terutama malam hari saat warung tutup.' },
-		{ icon: '💧', title: 'Air Minum', desc: 'Bawa minimal 2 botol air besar per mobil.' },
-		{ icon: '🧊', title: 'Cooler Box', desc: 'Bawa cooler box kecil untuk menyimpan minuman & makanan tetap segar.' },
-		{ icon: '🗺️', title: 'Download Offline Maps', desc: 'Download peta offline Bandung & Tasikmalaya di Google Maps sebelum berangkat.' },
-		{ icon: '☀️', title: 'Cuaca Lembang', desc: 'Suhu Lembang 15-22°C, bawa jaket tebal terutama malam hari.' }
-	];
+	const tips = checklistData.tips;
 
 	let totalItems = $derived(defaultData.reduce((sum, cat) => sum + cat.items.length, 0));
 	let checkedItems = $derived(checks.reduce((sum, arr) => sum + arr.filter(Boolean).length, 0));

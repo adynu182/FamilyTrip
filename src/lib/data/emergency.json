@@ -1,0 +1,156 @@
+{
+  "emergencyNational": [
+    {
+      "name": "Nomor Darurat Nasional",
+      "number": "112",
+      "desc": "Polisi, Ambulans, Damkar",
+      "icon": "solar:sos-bold"
+    },
+    {
+      "name": "Polisi",
+      "number": "110",
+      "desc": "Kepolisian Republik Indonesia",
+      "icon": "solar:police-bold"
+    },
+    {
+      "name": "Ambulans",
+      "number": "118",
+      "desc": "Ambulans Darurat",
+      "icon": "solar:ambulance-bold"
+    },
+    {
+      "name": "Ambulans (Alternatif)",
+      "number": "119",
+      "desc": "Kemenkes / PSC",
+      "icon": "solar:ambulance-bold"
+    },
+    {
+      "name": "Pemadam Kebakaran",
+      "number": "113",
+      "desc": "Damkar",
+      "icon": "solar:fire-truck-bold"
+    },
+    {
+      "name": "SAR / Basarnas",
+      "number": "115",
+      "desc": "Pencarian & Pertolongan",
+      "icon": "solar:lifebuoy-bold"
+    },
+    {
+      "name": "PLN",
+      "number": "123",
+      "desc": "Gangguan Listrik",
+      "icon": "solar:bolt-bold"
+    },
+    {
+      "name": "Posko Bencana (BNPB)",
+      "number": "117",
+      "desc": "Badan Nasional Penanggulangan Bencana",
+      "icon": "solar:crane-bold"
+    }
+  ],
+  "tollNumbers": [
+    {
+      "name": "JASA MARGA (Umum)",
+      "number": "14080",
+      "desc": "Layanan pelanggan Jasa Marga",
+      "icon": "🛣️"
+    },
+    {
+      "name": "Tol Cipularang/Padalarang",
+      "number": "(022) 6803333",
+      "desc": "PT Lintas Marga Sedaya",
+      "icon": "🛣️"
+    },
+    {
+      "name": "Tol Jakarta-Cikampek",
+      "number": "(021) 8904478",
+      "desc": "PT Jasa Marga",
+      "icon": "🛣️"
+    },
+    {
+      "name": "Derek Tol Gratis",
+      "number": "14080",
+      "desc": "Layanan derek gratis di tol Jasa Marga",
+      "icon": "🚗"
+    },
+    {
+      "name": "ASTRA Infra Toll",
+      "number": "1500-211",
+      "desc": "Tol Tangerang-Merak",
+      "icon": "🛣️"
+    }
+  ],
+  "hospitals": [
+    {
+      "name": "RS Hasan Sadikin Bandung",
+      "number": "(022) 2034953",
+      "coord": "-6.8882,107.6069",
+      "desc": "RS Umum terbesar di Bandung",
+      "icon": "solar:hospital-bold"
+    },
+    {
+      "name": "RS Borromeus Bandung",
+      "number": "(022) 2552000",
+      "coord": "-6.8996,107.6100",
+      "desc": "RS swasta di pusat kota Bandung",
+      "icon": "solar:hospital-bold"
+    },
+    {
+      "name": "RS Al-Islam Bandung",
+      "number": "(022) 7565588",
+      "coord": "-6.9268,107.6618",
+      "desc": "Di jalur menuju Cileunyi/Tasik",
+      "icon": "solar:hospital-bold"
+    },
+    {
+      "name": "RS SMC Tasikmalaya",
+      "number": "(0265) 326251",
+      "coord": "-7.3268,108.2171",
+      "desc": "RS utama di Tasikmalaya",
+      "icon": "solar:hospital-bold"
+    },
+    {
+      "name": "RSUD Tasikmalaya",
+      "number": "(0265) 331808",
+      "coord": "-7.3524,108.2234",
+      "desc": "RS Pemerintah Tasikmalaya",
+      "icon": "solar:hospital-bold"
+    },
+    {
+      "name": "RS Hermina Arcamanik",
+      "number": "(022) 87800900",
+      "coord": "-6.9204,107.6822",
+      "desc": "Di jalur tol Bandung-Cileunyi",
+      "icon": "solar:hospital-bold"
+    },
+    {
+      "name": "RS Mitra Kasih Cimahi",
+      "number": "(022) 6654852",
+      "coord": "-6.8740,107.5410",
+      "desc": "Dekat tol Padalarang",
+      "icon": "solar:hospital-bold"
+    },
+    {
+      "name": "RSUD Subang",
+      "number": "(0260) 411421",
+      "coord": "-6.5678,107.7533",
+      "desc": "Di jalur tol Jakarta-Bandung (rest area)",
+      "icon": "solar:hospital-bold"
+    },
+    {
+      "name": "RS Siloam Lippo Cikarang",
+      "number": "(021) 89901888",
+      "coord": "-6.3210,107.1476",
+      "desc": "Di jalur tol Jakarta-Cikampek",
+      "icon": "solar:hospital-bold"
+    },
+    {
+      "name": "RSUD Rangkasbitung",
+      "number": "(0252) 201013",
+      "coord": "-6.3542,106.2510",
+      "desc": "RS terdekat dari rumah",
+      "icon": "solar:hospital-bold"
+    }
+  ]
+}
