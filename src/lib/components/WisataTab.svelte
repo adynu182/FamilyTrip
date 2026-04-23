@@ -12,7 +12,7 @@
 		{ id: "unik", label: "Unik", icon: "solar:sparkle-bold" },
 	];
 
-	import places from '$lib/data/wisata.json';
+	import places from "$lib/data/wisata.json";
 
 	let filteredPlaces = $derived(
 		places.filter((p) => {
@@ -99,17 +99,32 @@
 				{#if place.ig || place.web || place.maps}
 					<div class="place-links">
 						{#if place.ig}
-							<a href={place.ig} target="_blank" rel="noopener noreferrer" class="link-btn ig">
+							<a
+								href={place.ig}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="link-btn ig"
+							>
 								<Icon icon="mdi:instagram" width="14" /> Instagram
 							</a>
 						{/if}
 						{#if place.web}
-							<a href={place.web} target="_blank" rel="noopener noreferrer" class="link-btn web">
+							<a
+								href={place.web}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="link-btn web"
+							>
 								<Icon icon="mdi:web" width="14" /> Website
 							</a>
 						{/if}
 						{#if place.maps}
-							<a href={place.maps} target="_blank" rel="noopener noreferrer" class="link-btn maps">
+							<a
+								href={place.maps}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="link-btn maps"
+							>
 								<Icon icon="mdi:map-marker" width="14" /> Maps
 							</a>
 						{/if}
@@ -215,7 +230,7 @@
 		border-radius: 8px;
 		background: var(--gradient-primary);
 		color: white;
-		font-size: 12px;
+		font-size: 18px;
 		font-weight: 700;
 		display: flex;
 		align-items: center;
@@ -316,7 +331,9 @@
 		font-size: 11px;
 		font-weight: 600;
 		text-decoration: none;
-		transition: opacity 0.2s, transform 0.1s;
+		transition:
+			opacity 0.2s,
+			transform 0.1s;
 	}
 	.link-btn:hover {
 		opacity: 0.8;
