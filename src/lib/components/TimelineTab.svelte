@@ -21,11 +21,11 @@
 	{#each days as day}
 		<div class="day-section">
 			<div class="day-header" style="--day-color: {day.color}">
-				<div class="day-dot"></div>
-				<div class="day-info">
-					<span class="day-label">{day.label}</span>
+				<div class="day-header-left">
+					<div class="day-dot"></div>
 					<span class="day-date">{day.date}</span>
 				</div>
+				<span class="day-label-badge">{day.label}</span>
 			</div>
 
 			{#each day.routes as route}
@@ -184,11 +184,16 @@
 	.day-header {
 		display: flex;
 		align-items: center;
-		gap: 12px;
+		justify-content: space-between;
 		padding: 10px 16px;
 		border-radius: 12px;
 		background: var(--bg-highlight);
 		border: 1px solid var(--border-subtle);
+	}
+	.day-header-left {
+		display: flex;
+		align-items: center;
+		gap: 12px;
 	}
 	.day-dot {
 		width: 14px;
@@ -198,20 +203,20 @@
 		box-shadow: 0 0 12px var(--day-color);
 		flex-shrink: 0;
 	}
-	.day-info {
-		display: flex;
-		flex-direction: column;
-	}
-	.day-label {
-		font-size: 11px;
-		font-weight: 700;
+	.day-label-badge {
+		font-size: 15px;
+		font-weight: 800;
 		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		color: var(--day-color);
+		letter-spacing: 0.05em;
+		color: #ffffff;
+		background: var(--day-color);
+		padding: 6px 14px;
+		border-radius: 20px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 	}
 	.day-date {
 		font-size: 15px;
-		font-weight: 600;
+		font-weight: 700;
 		color: var(--text-primary);
 	}
 

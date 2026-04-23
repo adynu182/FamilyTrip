@@ -1,7 +1,7 @@
 [
   {
     "date": "Jumat, 1 Mei 2026",
-    "label": "Hari 1",
+    "label": "Day 1",
     "color": "#4facfe",
     "routes": [
       {
@@ -117,16 +117,14 @@
   },
   {
     "date": "Sabtu, 2 Mei 2026",
-    "label": "Hari 2",
+    "label": "Day 2",
     "color": "#00d2a0",
     "routes": [
       {
         "id": 5,
         "from": "Villa Samakta (Lembang)",
         "to": "Wisata & Makan Siang",
-        "fromCoord": "-6.8131,107.6186",
-        "toCoord": "-6.8100,107.6100",
-        "mode": "2 Mobil",
+        "mode": "Rekreasi & Makan Siang",
         "modeIcon": "🚗",
         "departure": "09:00",
         "arrival": "~09:30",
@@ -188,7 +186,7 @@
   },
   {
     "date": "Minggu, 3 Mei 2026",
-    "label": "Hari 3",
+    "label": "Day 3",
     "color": "#ff8c42",
     "routes": [
       {
